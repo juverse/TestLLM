@@ -68,7 +68,7 @@ form {
   width: 50%;
   border: 1px solid #ccc;
   background-color: white;
-  margin: 0 auto;
+  margin: 0 auto 2em auto;
   border-radius: 12px;
 }
 
