@@ -42,7 +42,8 @@ form.addEventListener('submit', async (e: Event) => {
 
 function addMessage(role: 'user' | 'assistant', text: string) {
   const div = document.createElement('div');
-  div.className = 'message';
-  div.innerHTML = `<span class="${role}">${role === 'user' ? 'Du' : 'ChatGPT'}:</span> ${text}`;
+  div.className = `message ${role}`; 
+  div.textContent = text;
   chatDiv.appendChild(div);
 }
+
