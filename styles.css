@@ -1,3 +1,5 @@
+
+
 /* Timer oben rechts */
 #timer {
   position: fixed;
@@ -94,4 +96,24 @@ button {
 
 button:hover {
   background-color: #aaa;
+}
+
+/* Proceed-Button unten rechts */
+#proceedButton {
+  position: fixed;
+  right: 40px;
+  bottom: 32px;
+  z-index: 1001;
+  padding: 0.9em 2em;
+  font-size: 1.1em;
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#proceedButton:hover {
+  background: #388e3c;
 }

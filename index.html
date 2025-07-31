@@ -4,9 +4,15 @@
   <meta charset="UTF-8" />
   <title>llm-text-interaction</title>
   <link rel="stylesheet" href="styles.css" />
+  <!-- include bundled library -->
+  <script src="study-align-lib-bundle.js"></script>
+  <!-- study-align.js shows the usage of the library's methods -->
+  <script type="text/javascript" src="study-align.js"></script>
 </head>
 <body>
-  <div id="timer">20:00</div>
+  <div id="timer">20:00
+  </div>
+
   <div id="chat">
   </div>
 
@@ -15,8 +21,21 @@
     <button type="submit">Sent</button>
   </form>
 
-  <script src="dist/script.js" defer>
+  <div>
+    <button id="proceedButton">Proceed</button>
+  </div>
 
+  <script src="dist/script.js" defer></script>
+  <script>
+    function continueProcedure() {
+      const proceedButton = document.getElementById('proceedButton');
+      if (proceedButton) {
+        proceedButton.addEventListener('click', () => {
+          if (typeof proceed === 'function') proceed();
+        });
+      }
+    }
+    window.addEventListener("load", continueProcedure);
   </script>
 </body>
 </html>
